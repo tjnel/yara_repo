@@ -26,11 +26,11 @@ rule anubi
 		$ransom1 = "te S"
 		$ransom2 = "hado"
 		$ransom3 = "ws /"
-		$ransom4 = "$All"
-		$ransom5 = "$/Qui"
-		$ransom6 = "$et &"
+		$ransom4 = "All"
+		$ransom5 = "/Qui"
+		$ransom6 = "et &"
 
 
 	condition:
-		(uint16(0) == 0x5A4D) and (2 of ($av*)) and (3 of ($cmd*)) and (3 of ($anti*)) and (all of ($ransom*))
+		(uint16(0) == 0x5A4D) and (2 of ($av*)) and (3 of ($cmd*)) and (3 of ($anti*)) and (6 of ($ransom*))
 }
